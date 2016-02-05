@@ -1,182 +1,59 @@
-Variables
+#CodeBook for Getting and Cleaning Data Project
+#Data Source:
+  
+ # Site from where the Data was fetched
 
-##  [1] "tBodyAcc-mean()-X"                   
-##  [2] "tBodyAcc-mean()-Y"                   
-##  [3] "tBodyAcc-mean()-Z"                   
-##  [4] "tBodyAcc-std()-X"                    
-##  [5] "tBodyAcc-std()-Y"                    
-##  [6] "tBodyAcc-std()-Z"                    
-##  [7] "tGravityAcc-mean()-X"                
-##  [8] "tGravityAcc-mean()-Y"                
-##  [9] "tGravityAcc-mean()-Z"                
-## [10] "tGravityAcc-std()-X"                 
-## [11] "tGravityAcc-std()-Y"                 
-## [12] "tGravityAcc-std()-Z"                 
-## [13] "tBodyAccJerk-mean()-X"               
-## [14] "tBodyAccJerk-mean()-Y"               
-## [15] "tBodyAccJerk-mean()-Z"               
-## [16] "tBodyAccJerk-std()-X"                
-## [17] "tBodyAccJerk-std()-Y"                
-## [18] "tBodyAccJerk-std()-Z"                
-## [19] "tBodyGyro-mean()-X"                  
-## [20] "tBodyGyro-mean()-Y"                  
-## [21] "tBodyGyro-mean()-Z"                  
-## [22] "tBodyGyro-std()-X"                   
-## [23] "tBodyGyro-std()-Y"                   
-## [24] "tBodyGyro-std()-Z"                   
-## [25] "tBodyGyroJerk-mean()-X"              
-## [26] "tBodyGyroJerk-mean()-Y"              
-## [27] "tBodyGyroJerk-mean()-Z"              
-## [28] "tBodyGyroJerk-std()-X"               
-## [29] "tBodyGyroJerk-std()-Y"               
-## [30] "tBodyGyroJerk-std()-Z"               
-## [31] "tBodyAccMag-mean()"                  
-## [32] "tBodyAccMag-std()"                   
-## [33] "tGravityAccMag-mean()"               
-## [34] "tGravityAccMag-std()"                
-## [35] "tBodyAccJerkMag-mean()"              
-## [36] "tBodyAccJerkMag-std()"               
-## [37] "tBodyGyroMag-mean()"                 
-## [38] "tBodyGyroMag-std()"                  
-## [39] "tBodyGyroJerkMag-mean()"             
-## [40] "tBodyGyroJerkMag-std()"              
-## [41] "fBodyAcc-mean()-X"                   
-## [42] "fBodyAcc-mean()-Y"                   
-## [43] "fBodyAcc-mean()-Z"                   
-## [44] "fBodyAcc-std()-X"                    
-## [45] "fBodyAcc-std()-Y"                    
-## [46] "fBodyAcc-std()-Z"                    
-## [47] "fBodyAcc-meanFreq()-X"               
-## [48] "fBodyAcc-meanFreq()-Y"               
-## [49] "fBodyAcc-meanFreq()-Z"               
-## [50] "fBodyAccJerk-mean()-X"               
-## [51] "fBodyAccJerk-mean()-Y"               
-## [52] "fBodyAccJerk-mean()-Z"               
-## [53] "fBodyAccJerk-std()-X"                
-## [54] "fBodyAccJerk-std()-Y"                
-## [55] "fBodyAccJerk-std()-Z"                
-## [56] "fBodyAccJerk-meanFreq()-X"           
-## [57] "fBodyAccJerk-meanFreq()-Y"           
-## [58] "fBodyAccJerk-meanFreq()-Z"           
-## [59] "fBodyGyro-mean()-X"                  
-## [60] "fBodyGyro-mean()-Y"                  
-## [61] "fBodyGyro-mean()-Z"                  
-## [62] "fBodyGyro-std()-X"                   
-## [63] "fBodyGyro-std()-Y"                   
-## [64] "fBodyGyro-std()-Z"                   
-## [65] "fBodyGyro-meanFreq()-X"              
-## [66] "fBodyGyro-meanFreq()-Y"              
-## [67] "fBodyGyro-meanFreq()-Z"              
-## [68] "fBodyAccMag-mean()"                  
-## [69] "fBodyAccMag-std()"                   
-## [70] "fBodyAccMag-meanFreq()"              
-## [71] "fBodyBodyAccJerkMag-mean()"          
-## [72] "fBodyBodyAccJerkMag-std()"           
-## [73] "fBodyBodyAccJerkMag-meanFreq()"      
-## [74] "fBodyBodyGyroMag-mean()"             
-## [75] "fBodyBodyGyroMag-std()"              
-## [76] "fBodyBodyGyroMag-meanFreq()"         
-## [77] "fBodyBodyGyroJerkMag-mean()"         
-## [78] "fBodyBodyGyroJerkMag-std()"          
-## [79] "fBodyBodyGyroJerkMag-meanFreq()"     
-## [80] "angle(tBodyAccMean,gravity)"         
-## [81] "angle(tBodyAccJerkMean),gravityMean)"
-## [82] "angle(tBodyGyroMean,gravityMean)"    
-## [83] "angle(tBodyGyroJerkMean,gravityMean)"
-## [84] "angle(X,gravityMean)"                
-## [85] "angle(Y,gravityMean)"                
-## [86] "angle(Z,gravityMean)"                
-## [87] "Activity"                            
-## [88] "Subject"
+# http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+# Data for the Project
 
+#https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+#Saved in the Working Directory as folder named:
+  
+# UCI-HAR-Dataset
+#About the Data set :
+  
+#The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 
-Names extracted
+#The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain
 
-##  [1] "TimeBodyAccelerometerMean()-X"                    
-##  [2] "TimeBodyAccelerometerMean()-Y"                    
-##  [3] "TimeBodyAccelerometerMean()-Z"                    
-##  [4] "TimeBodyAccelerometerSTD()-X"                     
-##  [5] "TimeBodyAccelerometerSTD()-Y"                     
-##  [6] "TimeBodyAccelerometerSTD()-Z"                     
-##  [7] "TimeGravityAccelerometerMean()-X"                 
-##  [8] "TimeGravityAccelerometerMean()-Y"                 
-##  [9] "TimeGravityAccelerometerMean()-Z"                 
-## [10] "TimeGravityAccelerometerSTD()-X"                  
-## [11] "TimeGravityAccelerometerSTD()-Y"                  
-## [12] "TimeGravityAccelerometerSTD()-Z"                  
-## [13] "TimeBodyAccelerometerJerkMean()-X"                
-## [14] "TimeBodyAccelerometerJerkMean()-Y"                
-## [15] "TimeBodyAccelerometerJerkMean()-Z"                
-## [16] "TimeBodyAccelerometerJerkSTD()-X"                 
-## [17] "TimeBodyAccelerometerJerkSTD()-Y"                 
-## [18] "TimeBodyAccelerometerJerkSTD()-Z"                 
-## [19] "TimeBodyGyroscopeMean()-X"                        
-## [20] "TimeBodyGyroscopeMean()-Y"                        
-## [21] "TimeBodyGyroscopeMean()-Z"                        
-## [22] "TimeBodyGyroscopeSTD()-X"                         
-## [23] "TimeBodyGyroscopeSTD()-Y"                         
-## [24] "TimeBodyGyroscopeSTD()-Z"                         
-## [25] "TimeBodyGyroscopeJerkMean()-X"                    
-## [26] "TimeBodyGyroscopeJerkMean()-Y"                    
-## [27] "TimeBodyGyroscopeJerkMean()-Z"                    
-## [28] "TimeBodyGyroscopeJerkSTD()-X"                     
-## [29] "TimeBodyGyroscopeJerkSTD()-Y"                     
-## [30] "TimeBodyGyroscopeJerkSTD()-Z"                     
-## [31] "TimeBodyAccelerometerMagnitudeMean()"             
-## [32] "TimeBodyAccelerometerMagnitudeSTD()"              
-## [33] "TimeGravityAccelerometerMagnitudeMean()"          
-## [34] "TimeGravityAccelerometerMagnitudeSTD()"           
-## [35] "TimeBodyAccelerometerJerkMagnitudeMean()"         
-## [36] "TimeBodyAccelerometerJerkMagnitudeSTD()"          
-## [37] "TimeBodyGyroscopeMagnitudeMean()"                 
-## [38] "TimeBodyGyroscopeMagnitudeSTD()"                  
-## [39] "TimeBodyGyroscopeJerkMagnitudeMean()"             
-## [40] "TimeBodyGyroscopeJerkMagnitudeSTD()"              
-## [41] "FrequencyBodyAccelerometerMean()-X"               
-## [42] "FrequencyBodyAccelerometerMean()-Y"               
-## [43] "FrequencyBodyAccelerometerMean()-Z"               
-## [44] "FrequencyBodyAccelerometerSTD()-X"                
-## [45] "FrequencyBodyAccelerometerSTD()-Y"                
-## [46] "FrequencyBodyAccelerometerSTD()-Z"                
-## [47] "FrequencyBodyAccelerometerMeanFreq()-X"           
-## [48] "FrequencyBodyAccelerometerMeanFreq()-Y"           
-## [49] "FrequencyBodyAccelerometerMeanFreq()-Z"           
-## [50] "FrequencyBodyAccelerometerJerkMean()-X"           
-## [51] "FrequencyBodyAccelerometerJerkMean()-Y"           
-## [52] "FrequencyBodyAccelerometerJerkMean()-Z"           
-## [53] "FrequencyBodyAccelerometerJerkSTD()-X"            
-## [54] "FrequencyBodyAccelerometerJerkSTD()-Y"            
-## [55] "FrequencyBodyAccelerometerJerkSTD()-Z"            
-## [56] "FrequencyBodyAccelerometerJerkMeanFreq()-X"       
-## [57] "FrequencyBodyAccelerometerJerkMeanFreq()-Y"       
-## [58] "FrequencyBodyAccelerometerJerkMeanFreq()-Z"       
-## [59] "FrequencyBodyGyroscopeMean()-X"                   
-## [60] "FrequencyBodyGyroscopeMean()-Y"                   
-## [61] "FrequencyBodyGyroscopeMean()-Z"                   
-## [62] "FrequencyBodyGyroscopeSTD()-X"                    
-## [63] "FrequencyBodyGyroscopeSTD()-Y"                    
-## [64] "FrequencyBodyGyroscopeSTD()-Z"                    
-## [65] "FrequencyBodyGyroscopeMeanFreq()-X"               
-## [66] "FrequencyBodyGyroscopeMeanFreq()-Y"               
-## [67] "FrequencyBodyGyroscopeMeanFreq()-Z"               
-## [68] "FrequencyBodyAccelerometerMagnitudeMean()"        
-## [69] "FrequencyBodyAccelerometerMagnitudeSTD()"         
-## [70] "FrequencyBodyAccelerometerMagnitudeMeanFreq()"    
-## [71] "FrequencyBodyAccelerometerJerkMagnitudeMean()"    
-## [72] "FrequencyBodyAccelerometerJerkMagnitudeSTD()"     
-## [73] "FrequencyBodyAccelerometerJerkMagnitudeMeanFreq()"
-## [74] "FrequencyBodyGyroscopeMagnitudeMean()"            
-## [75] "FrequencyBodyGyroscopeMagnitudeSTD()"             
-## [76] "FrequencyBodyGyroscopeMagnitudeMeanFreq()"        
-## [77] "FrequencyBodyGyroscopeJerkMagnitudeMean()"        
-## [78] "FrequencyBodyGyroscopeJerkMagnitudeSTD()"         
-## [79] "FrequencyBodyGyroscopeJerkMagnitudeMeanFreq()"    
-## [80] "Angle(TimeBodyAccelerometerMean,Gravity)"         
-## [81] "Angle(TimeBodyAccelerometerJerkMean),GravityMean)"
-## [82] "Angle(TimeBodyGyroscopeMean,GravityMean)"         
-## [83] "Angle(TimeBodyGyroscopeJerkMean,GravityMean)"     
-## [84] "Angle(X,GravityMean)"                             
-## [85] "Angle(Y,GravityMean)"                             
-## [86] "Angle(Z,GravityMean)"                             
-## [87] "Activity"                                         
-## [88] "Subject"
+#run_analysis.R
+
+#Step 1. Merges the training and the test sets to create one data set.
+
+#Variables defined and their purpose are given below:
+  
+# trainData : Holds Data fetched by - read.table("./UCI-HAR-Dataset/train/X_train.txt")
+
+#trainLabel : Holds Data fetched by - read.table("./UCI-HAR-Dataset/train/y_train.txt")
+
+#trainSubject: Holds Data fetched by - read.table("./UCI-HAR-Dataset/train/subject_train.txt")
+
+#testData : Holds Data fetched by - read.table("./UCI-HAR-Dataset/test/X_test.txt")
+
+#testLabel : Holds Data fetched by - read.table("./UCI-HAR-Dataset/test/y_test.txt")
+
+#testSubject : Holds Data fetched by - read.table("./UCI-HAR-Dataset/test/subject_test.txt")
+
+#features : Holds Data fetched by - read.table("./UCI-HAR-Dataset/features.txt")
+
+#Other variables defined meanStdIndices, joinData , activity and a few to accomplish the extraction job.
+
+#Merging the data and train and subject tables using rbind() function.
+
+#Coded to perform the other steps mentioned below.
+
+#Step 2 :Extracts only the measurements on the mean and standard deviation for each measurement.
+
+#Step 3 : Uses descriptive activity names to name the activities in the data set
+
+#Step 4 :Appropriately labels the data set with descriptive activity names.
+
+#The file mergedData.txt is created.
+
+#Step 5 :Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+#The file tidyDataWithMeans.txt is created.
+
+#Output :
+  
+# Files are available in the working directory - UCI-HAR-Dataset
